@@ -10,7 +10,7 @@ import logging
 from functools import wraps
 from six.moves.urllib.parse import urlencode, urlparse
 
-from authlib.flask.client import OAuth
+from authlib.integrations.flask_client import OAuth
 import flask
 from flask import current_app
 
@@ -140,6 +140,10 @@ class Auth0(object):
         url = self._auth0.api_base_url + '/v2/logout?' + urlencode(params)
         logger.debug('redirecting to `{}`'.format(url))
         return flask.redirect(url)
+
+    def is_authenticated(self):
+        """Validate user is authenticated."""
+        return self._session_token_key in flask.session
 
     @property
     def access_token(self):
