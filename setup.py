@@ -5,13 +5,13 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='flask-auth0',
+    name='istreamplanet-flask-auth0',
     license='MIT',
     version='0.1.0',
-    description='A Flask extension for authenticating web applications using Auth0.',
-    author='Samuel Lesuffleur',
-    author_email='samuel@sandtable.com',
-    url='https://github.com/sandtable/flask-auth0',
+    description='A Flask extension for authenticating web applications using Auth0. Forked from https://github.com/sandtable/flask-auth0',
+    author='Samuel Lesuffleur, Jason LaDuke',
+    author_email='jasonladuke0311@gmail.com',
+    url='https://github.com/istreamlabs/flask-auth0',
     packages=find_packages(),
     platforms='any',
     include_package_data=False,
